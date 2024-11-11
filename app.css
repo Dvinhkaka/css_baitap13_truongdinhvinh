@@ -1,0 +1,107 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #007bff; /* Blue background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures full height background */
+}
+
+.panel {
+  background: #ffffff; /* White container for all pricing plans */
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 1200px; /* Control the overall width */
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-plan {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 1rem);
+  max-width: 320px;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.pricing-plan:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-img {
+  max-width: 80px;
+  margin: 0 auto 1rem;
+}
+
+.pricing-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.pricing-features-item {
+  padding: 0.5rem 0;
+}
+
+.pricing-price {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #ff8c00; /* Orange color for price text */
+}
+
+.pricing-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+/* Adjusting button colors */
+.pricing-button:not(.is-featured) {
+  background: #ffffff; /* White button background */
+  color: #007bff; /* Blue text for the 'Sign up' button */
+  border: 1px solid #007bff; /* Blue border */
+}
+
+.pricing-button:not(.is-featured):hover {
+  background: #e6f2ff; /* Light blue on hover */
+}
+
+.pricing-button.is-featured {
+  background: #007bff; /* Blue for 'Free trial' buttons */
+  color: #ffffff;
+}
+
+.pricing-button.is-featured:hover {
+  background: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+  .panel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-plan {
+    width: 90%;
+  }
+}
